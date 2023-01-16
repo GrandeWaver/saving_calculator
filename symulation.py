@@ -57,7 +57,7 @@ class Symulation:
 
     #WYKRES
     def build_plot(self):
-        fig, ax = plt.subplots(figsize=(32, 9))
+        fig, ax = plt.subplots(figsize=(16, 9))
         ax.plot(self.df['Data'], self.df['Cena'], label='cena')
         ax.plot(self.df['Data'], self.df['Srednia'], label=f'średnia cena z {self.every_x_days} dni')
         ax.plot(self.df['Data'], self.df['Kupno'], "s", label='moment kupna')
