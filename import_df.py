@@ -3,7 +3,7 @@ import pandas as pd
 #importuj dane historyczne indexu S&P500
 def import_df(days_range):
     #https://pl.investing.com/indices/us-spx-500-historical-data
-    df = pd.read_csv(r"C:\Users\macha\Desktop\SPX\Dane historyczne dla S&P 500 (0).csv")
+    df = pd.read_csv(r"https://github.com/GrandeWaver/saving_calculator/blob/main/Dane%20historyczne%20dla%20S%26P%20500%20(0).csv")
     df = df.head(days_range)
     #przygotowanie danych
     df['Ostatnio'] = df['Ostatnio'].str.replace('.', '')
