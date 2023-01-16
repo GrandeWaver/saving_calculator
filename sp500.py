@@ -11,18 +11,6 @@ st.title("Oszczędzanie")
 
 col1,col2, col3 = st.columns([1,2,1])
 
-#COLUMN 1
-col1.subheader("S&P500")
-with col1.expander("Czym jest S&P500"):
-    st.write("S&P 500 – indeks giełdowy, w skład którego wchodzi 500 przedsiębiorstw o największej kapitalizacji, notowanych na New York Stock Exchange i NASDAQ. Są to głównie przedsiębiorstwa amerykańskie.")
-with col1.expander("Jak oszczędzać"):
-    st.video('https://www.youtube.com/embed/6H3Bc5nQig0?start=74')
-with col1.expander("Czym jest fundusz inwestycyjny"):
-    st.write('To forma wspólnego inwestowania polegająca na zbiorowym lokowaniu środków pieniężnych wpłaconych przez uczestników funduszu.')
-with col1.expander("Co zamiast indeksu lub funduszu?"):
-    st.write('**Kupując akcje**, inwestor staje się współwłaścicielem spółki, zarabia na wzroście kursu lub na wypłacanej dywidendzie. **W przypadku obligacji** zyskiem są odsetki od pożyczonej emitentowi kwoty — mogą być one wypłacane cyklicznie lub w momencie, gdy upłynie czas trwania umowy.')
-
-
 #COLUMN 2
 col2.subheader("Konfiguracja")
 
@@ -33,6 +21,19 @@ BUY_SPACE = col2.number_input("Co ile dni kupujemy", value=30)
 with col2.expander("więcej"):
     DAYS_AVG = st.number_input("średnia krocząca", value=30)
     WAITER = st.number_input("poczekaj (po ilu dodatkowych dniach od spadku kupić)", value=5)
+
+#COLUMN 1
+col1.subheader("S&P500")
+with col1.expander("Czym jest S&P500"):
+    st.write("S&P 500 – indeks giełdowy, w skład którego wchodzi 500 przedsiębiorstw o największej kapitalizacji, notowanych na New York Stock Exchange i NASDAQ. Są to głównie przedsiębiorstwa amerykańskie.")
+with col1.expander("Strategia oszczędzania"):
+    st.write(f"Co miesiąc odłóż {AMOUNT} $ na zakup indeksu, poczekaj {DAYS} dni i ciesz się wynikami. W tym konkretnym modelu **dodatkowo** algorytm 'kupuje' indeks po tym jak **obecna cena jest niższa ze średniej ceny z {BUY_SPACE} dni**. Ten prosty sposób na kupowanie jest zastosowany przez bota, jednak wdrożenie go w życie nie jest czymś niemożliwym. Wystarczy co jakiś czas sprawdzać kurs indeksu i dokupować na lokalnych dołkach - bo takie podejście właśnie chciałem zobrazować.")
+with col1.expander("Jak oszczędzać"):
+    st.video('https://www.youtube.com/embed/6H3Bc5nQig0?start=74')
+with col1.expander("Czym jest fundusz inwestycyjny"):
+    st.write('To forma wspólnego inwestowania polegająca na zbiorowym lokowaniu środków pieniężnych wpłaconych przez uczestników funduszu.')
+with col1.expander("Co zamiast indeksu lub funduszu?"):
+    st.write('**Kupując akcje**, inwestor staje się współwłaścicielem spółki, zarabia na wzroście kursu lub na wypłacanej dywidendzie. **W przypadku obligacji** zyskiem są odsetki od pożyczonej emitentowi kwoty — mogą być one wypłacane cyklicznie lub w momencie, gdy upłynie czas trwania umowy.')
 
 
 #WYKONYWANIE SKRYPTU
