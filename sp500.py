@@ -27,7 +27,7 @@ col1.subheader("S&P500")
 with col1.expander("Czym jest S&P500"):
     st.write("S&P 500 – indeks giełdowy, w skład którego wchodzi 500 przedsiębiorstw o największej kapitalizacji, notowanych na New York Stock Exchange i NASDAQ. Są to głównie przedsiębiorstwa amerykańskie.")
 with col1.expander("Strategia oszczędzania"):
-    st.write(f"Co miesiąc odłóż {AMOUNT} $ na zakup indeksu, poczekaj {DAYS} dni i ciesz się wynikami. W tym konkretnym modelu **dodatkowo** algorytm 'kupuje' indeks po tym jak **obecna cena jest niższa ze średniej ceny z {BUY_SPACE} dni**. Ten prosty sposób na kupowanie jest zastosowany przez bota, jednak wdrożenie go w życie nie jest czymś niemożliwym. Wystarczy co jakiś czas sprawdzać kurs indeksu i dokupować na lokalnych dołkach - bo takie podejście właśnie chciałem zobrazować.")
+    st.write(f"Co {BUY_SPACE} dni odłóż {AMOUNT} $ na zakup indeksu, poczekaj {DAYS} dni i ciesz się wynikami. W tym konkretnym modelu **dodatkowo** algorytm 'kupuje' indeks po tym jak **obecna cena jest niższa ze średniej ceny z {DAYS_AVG} dni**. Ten prosty sposób na kupowanie jest zastosowany przez bota, jednak wdrożenie go w życie nie jest czymś niemożliwym. Wystarczy co jakiś czas sprawdzać kurs indeksu i dokupować na lokalnych dołkach - bo takie podejście właśnie chciałem zobrazować.")
 with col1.expander("Jak oszczędzać"):
     st.video('https://www.youtube.com/embed/6H3Bc5nQig0?start=74')
 with col1.expander("Czym jest fundusz inwestycyjny"):
