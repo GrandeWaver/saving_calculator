@@ -23,7 +23,7 @@ with col2.expander("więcej"):
     WAITER = st.number_input("poczekaj (po ilu dodatkowych dniach od spadku kupić)", value=5)
 
 #COLUMN 1
-col1.subheader("Infomacje")
+col1.subheader("Informacje")
 with col1.expander("Strategia oszczędzania"):
     st.write(f"Co **{BUY_SPACE} dni** odłóż **{AMOUNT} $** na zakup indeksu, poczekaj **{DAYS} dni** i ciesz się wynikami. W tym konkretnym modelu **dodatkowo** algorytm 'kupuje' indeks **{WAITER} dni** po tym jak **obecna cena jest niższa ze średniej ceny z {DAYS_AVG} dni**. Ten prosty sposób na kupowanie jest zastosowany przez bota, jednak wdrożenie go w życie nie jest czymś niemożliwym. Wystarczy co jakiś czas sprawdzać kurs indeksu i dokupować na lokalnych dołkach.")
 with col1.expander("Czym jest S&P500"):
