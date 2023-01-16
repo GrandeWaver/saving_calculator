@@ -14,7 +14,7 @@ col1,col2, col3 = st.columns([1,2,1])
 #COLUMN 2
 col2.subheader("Konfiguracja")
 
-DAYS = col2.slider("Zakres dni", min_value=30, max_value=5000, value=70)
+DAYS = col2.slider("Zakres dni", min_value=30, max_value=5000, value=900)
 AMOUNT = col2.number_input("Kwota", value=200)
 BUY_SPACE = col2.number_input("Co ile dni kupujemy", value=30)
 
