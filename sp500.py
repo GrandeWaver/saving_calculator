@@ -7,7 +7,7 @@ from best import best
 
 st.set_page_config(layout="wide")
 
-st.title("Oszczędzanie")
+st.title("Kalkulator oszczędzania")
 
 col1,col2, col3 = st.columns([1,2,1])
 
